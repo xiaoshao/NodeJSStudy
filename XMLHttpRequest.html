@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		var XMLHttp = new XMLHttpRequest();
+			function sendXmlHttp(){
+				
+				XMLHttp.open("POST", "baidu", true);
+				// XMLHttp.setRequestHeader("Access-Control-Allow-Origin","www.baidu.com");
+				XMLHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				// XMLHttp.setRequestHeader("Content-Length",100);
+				XMLHttp.onreadystatechange = callback;
+				XMLHttp.send("info = {data:[]}");
+
+			}
+			function callback(){
+				alert(XMLHttp.status);
+			}
+		</script>
+	</head>
+	<body>
+
+	<input type="button" value="sendXML" onclick="sendXmlHttp()" />
+	<body>
+</html>
+
